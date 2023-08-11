@@ -1,27 +1,56 @@
-# SmartecUI
+# Smartec - Aplicação E-commerce em Angular 🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Bem-vindo ao repositório da aplicação Smartec, um projeto de e-commerce desenvolvido como parte de um teste técnico. Esta aplicação utiliza Angular, Font Awesome para ícones e HTTP métodos para comunicação com a API.
 
-## Development server
+## Interface da Página
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![image](https://github.com/olirrvt/SmartechUI/assets/100844800/e81be716-a627-4f5a-92c2-a674893cbab6)
 
-## Code scaffolding
+## Decisões Técnicas e Arquiteturais
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Arquitetura
+A aplicação segue a arquitetura de Componentes do Angular para garantir uma separação clara das responsabilidades e facilitar a reutilização de código. Foram criados componentes para diferentes partes da aplicação, como header, produtos, carrinho de compras e outros, visando a modularidade e escalabilidade.
 
-## Build
+### Roteamento
+O roteamento da aplicação é gerenciado pelo Angular Router, permitindo a navegação entre diferentes páginas de forma suave. Isso facilita a experiência do usuário e organiza a estrutura da aplicação.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Gerenciamento de Estado
+O gerenciamento de estado é tratado principalmente através dos próprios serviços do Angular e das interações entre componentes. Para casos mais complexos, a adoção de um estado global com uma biblioteca como o NgRx poderia ser considerada.
 
-## Running unit tests
+## Frameworks e Bibliotecas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Angular
+O Angular foi escolhido como framework principal devido à sua robustez, facilidade de uso e ampla documentação. A estrutura do Angular ajuda a desenvolver uma aplicação estruturada e de fácil manutenção.
 
-## Running end-to-end tests
+### Font Awesome
+A biblioteca Font Awesome foi utilizada para a inclusão de ícones vetoriais, melhorando a experiência visual e a usabilidade da aplicação.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Compilação e Execução do Projeto
 
-## Further help
+1. Certifique-se de ter o Node.js instalado na sua máquina.
+2. Clone este repositório para o seu computador.
+3. Abra o terminal na pasta raiz do projeto.
+4. Execute o comando `npm install` para instalar as dependências.
+5. Após a instalação, execute `ng serve` para iniciar o servidor de desenvolvimento.
+6. Abra o navegador e navegue para `http://localhost:4200` para visualizar a aplicação.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+obs: é necessário ter a api rodando na sua máquina para o funcionamento. a api se encontra no meu repo).
+
+## Práticas de Desenvolvimento
+
+Durante o desenvolvimento desta aplicação, foram adotadas as seguintes práticas:
+
+- **Controle de Versão:** Utilizou-se Git para controle de versão, permitindo o acompanhamento das mudanças ao longo do tempo.
+- **Metodologia Kanban:** A ferramenta Kanban foi utilizada para organizar as tarefas, otimizando o fluxo de trabalho e a produtividade.
+- **Padronização de Código:** Foi seguido o guia de estilo oficial do Angular para manter a consistência e a legibilidade do código.
+
+## Notas Adicionais
+
+Esta aplicação foi desenvolvida como parte de um teste técnico e não representa uma implementação completa de um e-commerce. Algumas funcionalidades podem estar simplificadas ou ausentes devido a limitações de tempo e escopo.
+
+Para quaisquer dúvidas ou informações adicionais, por favor, entre em contato.
+
+---
+
+Agradeço por conferir o README da aplicação Smartec! Se tiver algum feedback, não hesite em entrar em contato.
+📩 taylorso2004@hotmail.com
