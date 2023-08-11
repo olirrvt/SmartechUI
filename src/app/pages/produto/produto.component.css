@@ -1,0 +1,74 @@
+/* Estilo para a seção de produtos */
+
+.section-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 90px;
+  }
+  
+  /* Estilo para cada card de produto */
+
+  .product-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para o ícone do produto */
+
+  .product-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .product-icon i {
+    color: #ffffff;
+    font-size: 24px;
+  }
+  
+  /* Estilo para o nome do produto */
+
+  .product-name {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o preço do produto */
+
+  .product-price {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  /* Estilo para a categoria do produto */
+
+  .product-category {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  /* Estilo para o botão "Adicionar ao Carrinho" */
+
+  .add-to-cart-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #0056b3;
+  }
+  

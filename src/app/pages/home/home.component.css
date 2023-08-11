@@ -1,0 +1,148 @@
+.section-banner {
+    margin-top: 90px;
+}
+
+/* Estilos para o banner pequeno */
+
+.banner-pequeno {
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    margin: 15px auto;
+    font-weight: 700;
+    font-size: 16pt;
+    width: 60%;
+    background-color: #F80132;
+    color: #fff;
+}
+
+.texto-destaque {
+    color: #FED611;
+}
+
+/* Estilos para o banner maior */
+
+.banner-grande {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    width: 62%;
+    background-color: #e72d52;
+}
+
+.container-anuncio {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.container-promocao {
+    width: 50%;
+    padding: 56px;
+    background-color: #F80132;
+    color: #fff;
+}
+
+.link-view {
+    text-align: center;
+    color: #F80132;
+    background-color: #FED611;
+    width: 24%;
+    font-weight: bold;
+    padding: 2px;
+}
+
+/* Estilos para os Cards */
+
+.cards-pequenos {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.lista-cards {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.item-card {
+    background-color: #F80132;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Estilos para produtos */
+
+.section-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-top: 90px;
+}
+
+.container-produtos {
+    width: 300px;
+}
+
+/* Estilos para o Card de produtos */
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-icon {
+    background-color: #ccc;
+    padding: 60px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+  }
+  
+  .product-name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #03F132;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .product-category {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .ver-produto {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .link-produtos {
+    margin-top: 2em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #F80132;
+  }

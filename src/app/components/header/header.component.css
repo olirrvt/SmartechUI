@@ -1,0 +1,219 @@
+/* Estilos para o banner do cabeçalho */
+
+.banner-cabecalho {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    padding: 20px;
+}
+
+.textblack,
+.textred {
+    font-size: 16pt;
+    font-weight: bolder;
+}
+
+.textred {
+    color: #E00C38;
+}
+
+/* Estilos para a área de cabeçalho principal */
+
+.cabecalho-principal {
+    padding: 20px 20px 0px 20px;
+    background-color: #F80032;
+}
+
+.secao-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.logo-cabecalho {
+    color: #fff;
+    font-size: 18pt;
+    font-weight: 800;
+}
+
+/* Estilos para o input de pesquisa */
+
+.secao-pesquisar {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    border: 1px solid #ffffff;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.secao-pesquisar input::placeholder {
+    color: #858585;
+}
+
+.barra-pesquisar {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.icone-pesquisar {
+    color: #F80032;
+    margin-right: 10px;
+}
+
+/* Estilos para a seção do usuário */
+
+.secao-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-usuario {
+    display: flex;
+    gap: 13px;
+}
+
+.icone-usuario {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.link-user {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.link-user:hover {
+    color: #e4dede;
+    transition: all 450ms ease-in-out;
+}
+
+/* Estilos para o dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 12px;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .container-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button {
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .btn-login {
+    background-color: #F80032;
+    color: #fff;
+    font-weight: bolder;
+  }
+
+  .btn-cadastro {
+    background-color: #fff;
+    border: 2px solid #F80032;
+    color: #E00C38;
+    font-weight: bolder;
+  }
+
+/* Estilos para a seção de ícones */
+
+.secao-icones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos para a seção secundaria */
+
+.secao-secundaria {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 10pt;
+}
+
+/* Estilos da Navegação dos links e o CEP */
+
+.cep-usuario {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.cep-usuario span {
+    font-weight: bolder;
+}
+
+/* Regra geral para as listas */
+
+.link-nav {
+    display: flex;
+    list-style: none;
+    font-weight: bolder;
+    cursor: pointer;
+    gap: 15px;
+}
+
+/* --------------------------------------------- */
+/* ---- Estilos para o cabeçalho secundario ---- /*
+/* --------------------------------------------- */
+
+.cabecalho-secundario {
+    background-color: #fff;
+    padding: 2px;
+}
+
+.ul-secundaria {
+    justify-content: center;
+    font-size: 10pt;
+    gap: 40px;
+    font-weight: 500;
+}
+
+.ul-secundaria li {
+    color: #000000;
+    transition: all 450ms;
+}
+
+.ul-secundaria li:hover {
+    color: #858585;
+    transition: all 450ms;
+}

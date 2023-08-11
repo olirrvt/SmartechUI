@@ -1,0 +1,30 @@
+<section class="cadastrar-produtos">
+    <div class="form-container">
+        <h2>Cadastrar Novo Produto</h2>
+        <form [formGroup]="formCadastrar" (ngSubmit)="cadastrarProduto()">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" formControlName="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" formControlName="preco" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" formControlName="categoria" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" formControlName="descricao" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="idDaPromocao">ID da Promoção:</label>
+            <input type="number" id="idDaPromocao" formControlName="idDaPromocao" class="form-control">
+          </div>
+          <button type="submit" [disabled]="!formCadastrar.valid" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+</section>
+
+  

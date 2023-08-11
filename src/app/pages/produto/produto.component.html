@@ -1,0 +1,11 @@
+<section class="section-produtos">
+    <div *ngFor="let prod of listaProdutos" class="product-card">
+        <div class="product-icon">
+            <i class="fa-solid fa-gamepad fa-2xl" style="color: #ffffff;"></i>
+        </div>
+        <h2 class="product-name">{{ prod.nome }}</h2>
+        <p class="product-price">R$ {{ prod.preco }},00</p>
+        <p class="product-category">Categoria: {{ prod.categoria }}</p>
+        <button class="add-to-cart-button">Adicionar ao Carrinho</button>
+    </div>    
+</section>

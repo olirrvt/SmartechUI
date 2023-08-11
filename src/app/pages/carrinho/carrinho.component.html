@@ -1,0 +1,60 @@
+<section class="section-carrinho">
+
+    <div class="container-itens">
+
+        <div class="info-produtos">
+            <div>
+                <span>Produto</span>
+            </div>
+            <div class="container-especificacao">
+                <span>Qtd.</span>
+                <span>Preço</span>
+            </div>
+        </div>
+
+        <div class="container-card-produto">
+
+
+            <div class="conteudo-principal">
+                <!-- <span>{{ produto.nome | titlecase }}</span> <br>
+                <span>Categoria: {{ produto.categoria | titlecase }}</span> -->
+            </div>
+
+            <div class="container-preco">
+                <span>Preço:</span>
+                <!-- <span> R$ {{ calcularPrecoComPromocao(produto, quantidade[i]) }},00</span> -->
+            </div>
+
+            <div class="container-quantidade">
+                <span>Quantidade</span>
+                <!-- <input type="number" [(ngModel)]="quantidade[i]" (change)="atualizarQuantidade(i, quantidade[i])" class="quantidade-input" min="1" /> -->
+            </div>
+
+            <div class="container-interacao">
+                <button class="btn-remover">Remover</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-resumo-pedido">
+        <h1>Resumo pedido</h1>
+    
+        <div class="especificacao-resumo">
+            <div>
+                <!-- <span>{{ totalProdutos }} produto(s)</span> -->
+            </div>
+        </div>
+    
+        <div class="container-total">
+            <!-- <span>total</span>
+            <span>R${{ calcularTotaisComPromocao() }},00</span> -->
+        </div>
+    
+        <div class="container-comprar">
+            <button class="btn-comprar">Comprar</button>
+        </div>
+    </div>    
+
+</section>
