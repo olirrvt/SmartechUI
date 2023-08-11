@@ -15,9 +15,10 @@ export class CarrinhoComponent {
   produtosNoCarrinho: Produto[] = [];
   carrinhoId: number = 1;
   itensCarrinho: ItensCarrinho[] = [];
+  totalComDesconto: number = 0;
   total: number = 0;
 
-  promocoes: Promocao[] = []; // Armazena as promoções
+  promocoes: Promocao[] = [];
 
   constructor(
     private carrinhoService: CarrinhoService,
@@ -26,7 +27,7 @@ export class CarrinhoComponent {
   ) {}
 
   ngOnInit(): void {
-    this.carregarPromocoes(); // Carrega as promoções disponíveis
+    this.carregarPromocoes();
     this.atualizarItensCarrinho();
   }
 
@@ -40,26 +41,30 @@ export class CarrinhoComponent {
     this.carrinhoService.verItensCarrinho(this.carrinhoId).subscribe(itens => {
       this.itensCarrinho = itens;
       this.atualizarPrecosDosProdutos();
-      this.calcularTotal();
     });
   }
 
   atualizarPrecosDosProdutos(): void {
+    this.produtosNoCarrinho = []; // Limpa a lista para evitar duplicações
+    
+    this.total = 0;
+    
     for (const item of this.itensCarrinho) {
       this.produtoService.getProdutoById(item.idDoProduto).subscribe(produto => {
         this.produtosNoCarrinho.push(produto);
         item.idDoProdutoNavigation = produto;
-
+  
         // Aplicar promoção, se existir uma promoção vinculada ao produto
         const promocao = this.promocoes.find(p => p.idDaPromocao === produto.idDaPromocao);
         if (promocao) {
           this.aplicarPromocaoAoProduto(item, promocao);
         }
-
-        this.calcularTotal();
+  
+        // Atualizar o total com o preço com promoção aplicada
+        this.totalComDesconto += item.precoComPromocao;
       });
     }
-  }
+  }  
 
   atualizarQuantidade(itemId: number, novaQuantidade: number, index: number): void {
     this.carrinhoService.atualizarQuantidadeItem(this.carrinhoId, itemId, novaQuantidade).subscribe(response => {
@@ -70,41 +75,31 @@ export class CarrinhoComponent {
   }
 
   aplicarPromocaoAoProduto(item: ItensCarrinho, promocao: Promocao): void {
-    if (item.idDoProdutoNavigation) {
-
-      if (promocao.nomeDaPromocao === 'Leve 2 e pague 1') {
-
-      const quantidadeDescontada = Math.floor(item.quantidade / 2);
-      const quantidadeSemDesconto = item.quantidade - quantidadeDescontada;
-
-      console.log('Quantidade Descontada:', quantidadeDescontada);
-      console.log('Quantidade Sem Desconto:', quantidadeSemDesconto);
-      console.log('Preço Original:', item.idDoProdutoNavigation.preco);
-
-      const precoComDesconto = quantidadeDescontada * item.idDoProdutoNavigation.preco + quantidadeSemDesconto * item.idDoProdutoNavigation.preco;
-
-      item.precoComPromocao = precoComDesconto / item.quantidade;
-
-      } else if (promocao.nomeDaPromocao === 'Leve 3 por 10') {
-
-        let quantidadeDescontada = Math.floor(item.quantidade / 3 );
-
-        console.log('Quantidade Descontada:', quantidadeDescontada);
-        console.log('Preço Original:', item.idDoProdutoNavigation.preco);
-      
-        const precoSemDesconto = item.idDoProdutoNavigation.preco * item.quantidade;
-        const precoComDesconto = precoSemDesconto - (quantidadeDescontada * 10);
-      
-        item.precoComPromocao = precoComDesconto / item.quantidade;
-
+    const precoPorItem = item.idDoProdutoNavigation?.preco;
+    const quantidade = item.quantidade;
+    const tipoDePromocao = item.idDoProdutoNavigation?.idDaPromocao;
+  
+    let precoTotal = 0;
+  
+    if (tipoDePromocao === 2 && quantidade === 2) { // Leve 2 e pague por 1
+      if (precoPorItem !== undefined) {
+        console.log(precoPorItem);
+        precoTotal = precoPorItem;
       } else {
-        item.precoComPromocao = item.idDoProdutoNavigation.preco;
+        console.error("Preço por item não está definido.");
+      }
+    } else if (tipoDePromocao === 3 && quantidade === 3) { // Leve 3 por 10
+      precoTotal = 10;
+    } else {
+      if (precoPorItem !== undefined) {
+        precoTotal = precoPorItem * quantidade;
+        console.log(precoTotal);
+      } else {
+        console.error("Preço por item não está definido.");
       }
     }
-  }  
 
-  calcularTotal(): void {
-    this.total = this.itensCarrinho.reduce((acc, item) => acc + (item.precoComPromocao || 0) * item.quantidade, 0);
+    item.precoComPromocao = precoTotal;
   }
 
   removerItem(itemId: number): void {
