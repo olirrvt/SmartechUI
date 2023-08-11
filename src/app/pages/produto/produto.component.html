@@ -6,6 +6,6 @@
         <h2 class="product-name">{{ prod.nome }}</h2>
         <p class="product-price">R$ {{ prod.preco }},00</p>
         <p class="product-category">Categoria: {{ prod.categoria }}</p>
-        <button class="add-to-cart-button">Adicionar ao Carrinho</button>
+        <button class="add-to-cart-button" (click)="adicionarAoCarrinho(prod)">Adicionar ao Carrinho</button>
     </div>    
 </section>

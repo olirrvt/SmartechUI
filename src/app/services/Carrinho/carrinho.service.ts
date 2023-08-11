@@ -36,6 +36,12 @@ export class CarrinhoService {
     );
   }
 
+  atualizarQuantidadeItem(carrinhoId: number, itemId: number, novaQuantidade: number): Observable<string> {
+    return this.http.put<string>(`${this.apiUrl}/${carrinhoId}/atualizarQuantidade/${itemId}`, novaQuantidade).pipe(
+      catchError(this.handleError)
+    );
+  }  
+
   private handleError(error: any): Observable<never> {
     console.error('Erro na requisição:', error);
     throw error;
