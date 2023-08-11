@@ -9,3 +9,11 @@
         <button class="add-to-cart-button" (click)="adicionarAoCarrinho(prod)">Adicionar ao Carrinho</button>
     </div>    
 </section>
+<!-- Modal -->
+<div *ngIf="produtoAdicionado" class="modal">
+    <div class="modal-content">
+        <span class="close" (click)="fecharModal()">&times;</span>
+        <h2>Produto Adicionado ao Carrinho</h2>
+        <p>O produto {{ produtoAdicionado.nome }} foi adicionado ao seu carrinho.</p>
+    </div>
+</div>

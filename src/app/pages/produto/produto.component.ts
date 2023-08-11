@@ -11,6 +11,7 @@ import { CarrinhoService } from 'src/app/services/Carrinho/carrinho.service';
 export class ProdutoComponent {
   carrinhoId: number = 1;
   listaProdutos: Produto[] = [];
+  produtoAdicionado: Produto | null = null;
 
   constructor(
     private produtoService: ProdutoService,
@@ -28,14 +29,19 @@ export class ProdutoComponent {
   }
 
   adicionarAoCarrinho(produto: Produto): void {
+
     const itemCarrinho = {
       carrinhoId: this.carrinhoId,
       idDoProduto: produto.id,
       quantidade: 1 
     };
-
-    this.carrinhoService.adicionarItem(this.carrinhoId, itemCarrinho).subscribe(response => {
-      console.log(response); 
-    });
+    
+    this.produtoAdicionado = produto;
+    this.carrinhoService.adicionarItem(this.carrinhoId, itemCarrinho);
   }
+
+  fecharModal() {
+    this.produtoAdicionado = null;
+  }
+  
 }
