@@ -17,6 +17,8 @@ export class CarrinhoComponent {
   itensCarrinho: ItensCarrinho[] = [];
   totalComDesconto: number = 0;
   total: number = 0;
+  produtosComprados: Produto[] = [];
+  showModal: boolean = false;
 
   promocoes: Promocao[] = [];
 
@@ -46,7 +48,6 @@ export class CarrinhoComponent {
 
   atualizarPrecosDosProdutos(): void {
     this.produtosNoCarrinho = []; // Limpa a lista para evitar duplicações
-    
     this.total = 0;
     
     for (const item of this.itensCarrinho) {
@@ -100,6 +101,16 @@ export class CarrinhoComponent {
     }
 
     item.precoComPromocao = precoTotal;
+  }
+
+  comprar(): void {
+    this.atualizarPrecosDosProdutos();
+    this.produtosComprados = this.produtosNoCarrinho.slice();
+    this.showModal = true;
+  }
+
+  fecharModal(): void {
+    this.showModal = false;
   }
 
   removerItem(itemId: number): void {

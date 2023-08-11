@@ -134,3 +134,42 @@
     background-color: #22a822;
     transition: all 450ms ease-in;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .show-modal {
+    display: flex;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 60px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .btn-fechar {
+    background-color: #e80000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 450ms ease-in;
+  }
+  
+  .btn-fechar:hover {
+    background-color: #555;
+    transition: all 450ms ease-in;
+  }
+  

@@ -47,8 +47,26 @@
       </div>
   
       <div class="container-comprar">
-        <button class="btn-comprar">Comprar</button>
+        <button class="btn-comprar" (click)="comprar()">Comprar</button>
       </div>
+      
     </div>
+
+    <div class="modal" [ngClass]="{'show-modal': showModal}">
+      <div class="modal-content">
+        <h2>Compra Concluída</h2>
+        <div class="produtos-comprados">
+          <h3>Produtos Comprados:</h3>
+          <ul>
+            <li *ngFor="let produto of produtosComprados">{{ produto.nome }}</li>
+          </ul>
+        </div>
+        <div class="total-compra">
+          <h3>Total da Compra:</h3>
+          <p>R$ {{ totalComDesconto | number:'1.2-2' }}</p>
+        </div>
+        <button class="btn-fechar" (click)="fecharModal()">Fechar</button>
+      </div>
+    </div>    
   
-  </section>  
+  </section> 

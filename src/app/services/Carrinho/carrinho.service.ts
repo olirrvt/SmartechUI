@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable, forkJoin } from 'rxjs';
+import { catchError, map, switchMap } from 'rxjs/operators';
 import { ItensCarrinho } from 'src/app/models/ItensCarrinhos';
 
 @Injectable({
@@ -35,12 +35,13 @@ export class CarrinhoService {
       catchError(this.handleError)
     );
   }
+  
 
   atualizarQuantidadeItem(carrinhoId: number, itemId: number, novaQuantidade: number): Observable<string> {
     return this.http.put<string>(`${this.apiUrl}/${carrinhoId}/atualizarQuantidade/${itemId}`, novaQuantidade).pipe(
       catchError(this.handleError)
     );
-  }  
+  }
 
   private handleError(error: any): Observable<never> {
     console.error('Erro na requisição:', error);
