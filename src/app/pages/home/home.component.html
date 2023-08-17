@@ -1,66 +1,70 @@
 <section class="section-banner">
-    <div class="banner-pequeno">
-        <span class="texto-anuncio">
-            <span class="texto-destaque">Só aqui</span> você encontra as melhores ofertas • <span class="texto-destaque">aproveite agora ></span>
-        </span>
+  <div class="banner-pequeno">
+    <span class="texto-anuncio">
+      <span class="texto-destaque">Só aqui</span> você encontra as melhores
+      ofertas • <span class="texto-destaque">aproveite agora ></span>
+    </span>
+  </div>
+
+  <div class="banner-grande">
+    <div class="container-anuncio">
+      <img
+        src="../../../assets/img/xbox-para-anuncio.png"
+        width="320px"
+        alt="console-xbox"
+      />
     </div>
 
-    <div class="banner-grande">
-
-        <div class="container-anuncio">
-            <img src="../../../assets/img/xbox-para-anuncio.png" width="320px" alt="console-xbox">
-        </div>
-
-        <div class="container-promocao">
-            <div class="container-texto">
-                Seleção de games <br>
-                <span style="font-weight: bolder;">com até</span> <br>
-                <span style="font-weight: bolder; font-size: 50pt;">50</span> <span style="font-size: 40pt;">%</span>
-                <span style="font-weight: bolder;"> de desconto</span>
-            </div>
-            <div class="link-view">
-                <span>queeero</span>
-            </div>
-        </div>
-
+    <div class="container-promocao">
+      <div class="container-texto">
+        Seleção de games <br />
+        <span style="font-weight: bolder">com até</span> <br />
+        <span style="font-weight: bolder; font-size: 50pt">50</span>
+        <span style="font-size: 40pt">%</span>
+        <span style="font-weight: bolder"> de desconto</span>
+      </div>
+      <div class="link-view">
+        <span>queeero</span>
+      </div>
     </div>
+  </div>
 
-    <div class="cards-pequenos">
-        <ul class="lista-cards">
-            <li class="item-card">
-                <i class="fa-brands fa-apple fa-2xl" style="color: #ffffff;"></i>
-            </li>
-            <li class="item-card">
-                <i class="fa-solid fa-bomb fa-2xl" style="color: #ffffff;"></i>
-            </li>
-            <li class="item-card">
-                <i class="fa-solid fa-mug-hot fa-2xl" style="color: #ffffff;"></i>
-            </li>
-            <li class="item-card">
-                <i class="fa-solid fa-tag fa-2xl" style="color: #ffffff;"></i>
-            </li>
-            <li class="item-card">
-                <i class="fa-solid fa-city fa-2xl" style="color: #ffffff;"></i>
-            </li>
-            <li class="item-card">
-                <i class="fa-solid fa-briefcase fa-2xl" style="color: #ffffff;"></i>
-            </li>
-            <li class="item-card">
-                <i class="fa-brands fa-android fa-2xl" style="color: #ffffff;"></i>
-            </li>
-        </ul>
-    </div>
+  <div class="cards-pequenos">
+    <ul class="lista-cards">
+      <li class="item-card">
+        <i class="fa-brands fa-apple fa-2xl" style="color: #ffffff"></i>
+      </li>
+      <li class="item-card">
+        <i class="fa-solid fa-bomb fa-2xl" style="color: #ffffff"></i>
+      </li>
+      <li class="item-card">
+        <i class="fa-solid fa-mug-hot fa-2xl" style="color: #ffffff"></i>
+      </li>
+      <li class="item-card">
+        <i class="fa-solid fa-tag fa-2xl" style="color: #ffffff"></i>
+      </li>
+      <li class="item-card">
+        <i class="fa-solid fa-city fa-2xl" style="color: #ffffff"></i>
+      </li>
+      <li class="item-card">
+        <i class="fa-solid fa-briefcase fa-2xl" style="color: #ffffff"></i>
+      </li>
+      <li class="item-card">
+        <i class="fa-brands fa-android fa-2xl" style="color: #ffffff"></i>
+      </li>
+    </ul>
+  </div>
 </section>
 <section class="section-produtos">
-    <div *ngFor="let prod of listaProdutos" class="product-card">
-        <div class="product-icon">
-            <i class="fa-solid fa-gamepad fa-2xl" style="color: #ffffff;"></i>
-        </div>
-        <h2 class="product-name">{{ prod.nome }}</h2>
-        <p class="product-price">R$ {{ prod.preco }},00</p>
-        <p class="product-category">Categoria: {{ prod.categoria }}</p>
-        <div class="ver-produto">
-            <a class="link-produtos" href="/verProdutos">Ver mais Produtos</a>
-        </div>
-    </div>    
+  <div *ngFor="let prod of listaProdutos" class="product-card">
+    <div class="product-icon">
+      <i class="fa-solid fa-gamepad fa-2xl" style="color: #ffffff"></i>
+    </div>
+    <h2 class="product-name">{{ prod.nome }}</h2>
+    <p class="product-price">R$ {{ prod.preco }},00</p>
+    <p class="product-category">Categoria: {{ prod.categoria }}</p>
+    <div class="ver-produto">
+      <a class="link-produtos" href="/produtos">Ver mais Produtos</a>
+    </div>
+  </div>
 </section>

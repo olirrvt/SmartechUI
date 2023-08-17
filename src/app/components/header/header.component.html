@@ -1,72 +1,70 @@
 <header>
+  <div class="banner-cabecalho">
+    <span class="textred">Dia dos pais</span> •
+    <span class="textblack">Leve 2 e pague 1!</span> •
+    <span class="textblack">Até 20% de cashback</span> •
+    <span class="textred">Queeero ></span>
+  </div>
 
-    <div class="banner-cabecalho">
-        <span class="textred">Dia dos pais</span> •
-        <span class="textblack">Leve 2 e pague 1!</span> •
-        <span class="textblack">Até 20% de cashback</span> •
-        <span class="textred">Queeero ></span>
+  <div class="cabecalho-principal">
+    <div class="secao-principal">
+      <div class="logo-cabecalho">
+        <a href="/"> TechMart </a>
+      </div>
+
+      <div class="secao-pesquisar">
+        <input
+          type="text"
+          class="barra-pesquisar"
+          placeholder="Busque aqui o seu produto"
+          [(ngModel)]="pesquisa"
+        />
+        <a (click)="pesquisar()">
+          <i class="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+        </a>
+      </div>
+
+      <div class="secao-icones">
+        <i class="fa-solid fa-shop fa-lg" style="color: #ffffff"></i>
+        <i class="fa-regular fa-heart fa-lg" style="color: #ffffff"></i>
+        <a href="/carrinho">
+          <i
+            class="fa-solid fa-basket-shopping fa-lg"
+            style="color: #ffffff"
+          ></i>
+        </a>
+      </div>
     </div>
 
-    <div class="cabecalho-principal">
-
-        <div class="secao-principal">
-
-            <div class="logo-cabecalho">
-                <a href="/">
-                    TechMart
-                </a>
-            </div>
-    
-            <div class="secao-pesquisar">
-                <input type="text" class="barra-pesquisar" placeholder="Busque aqui o seu produto" [(ngModel)]="pesquisa">
-                <a (click)="pesquisar()">
-                    <i class="fa-solid fa-magnifying-glass icone-pesquisar"></i>
-                </a>
-            </div>
-    
-            <div class="secao-icones">
-                <i class="fa-solid fa-shop fa-lg" style="color: #ffffff;"></i>
-                <i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i>
-                <a href="/carrinho">
-                    <i class="fa-solid fa-basket-shopping fa-lg" style="color: #ffffff;"></i>
-                </a>
-            </div>
-
-        </div>
-
-        <div class="secao-secundaria">
-            <div class="cep-usuario">
-                <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
-                <span>Venha experimentar nossas ofertas</span>
-            </div>
-            <div>
-                <ul class="link-nav">
-                    <li><a href="/produtos">Produtos</a></li>
-                    <li><a href="/cadastrar-produtos">Cadastrar produtos</a></li>
-                    <li><a href="/cadastrar-promocao">Cadastrar promoção</a></li>
-                </ul>
-            </div>
-        </div>
-
+    <div class="secao-secundaria">
+      <div class="cep-usuario">
+        <i class="fa-solid fa-location-dot" style="color: #ffffff"></i>
+        <span>Venha experimentar nossas ofertas</span>
+      </div>
+      <div>
+        <ul class="link-nav">
+          <li><a href="/produtos">Produtos</a></li>
+          <li><a href="/cadastrar-produtos">Cadastrar produtos</a></li>
+          <li><a href="/cadastrar-promocao">Cadastrar promoção</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="cabecalho-secundario">
-        <div class="secao-terciaria">
-                <ul class="link-nav ul-secundaria">
-                    <li>alimentos</li>
-                    <li>eletrodomésticos</li>
-                    <li>informática</li>
-                    <li>video games</li>
-                    <li>móveis</li>
-                    <li>tv e home theater</li>
-                    <li>cozinha</li>
-                    <li>música</li>
-                </ul>
-        </div>
+  <div class="cabecalho-secundario">
+    <div class="secao-terciaria">
+      <ul class="link-nav ul-secundaria">
+        <li>alimentos</li>
+        <li>eletrodomésticos</li>
+        <li>informática</li>
+        <li>video games</li>
+        <li>móveis</li>
+        <li>tv e home theater</li>
+        <li>cozinha</li>
+        <li>música</li>
+      </ul>
     </div>
+  </div>
 
-    <div>
-
-    </div>
-
+  <div></div>
 </header>

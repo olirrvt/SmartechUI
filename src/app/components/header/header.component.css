@@ -65,6 +65,13 @@
 .icone-pesquisar {
     color: #F80032;
     margin-right: 10px;
+    cursor: pointer;
+    transition: all 440ms ease-in-out;
+}
+
+.icone-pesquisar {
+    color: #E00C38;
+    transition: all 440ms ease-in-out;
 }
 
 /* Estilos para a seção do usuário */
