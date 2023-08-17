@@ -99,56 +99,6 @@
     transition: all 450ms ease-in-out;
 }
 
-/* Estilos para o dropdown */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown.open .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    margin-top: 12px;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-
-  .container-dropdown {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .button {
-    border: none;
-    padding: 6px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-  .btn-login {
-    background-color: #F80032;
-    color: #fff;
-    font-weight: bolder;
-  }
-
-  .btn-cadastro {
-    background-color: #fff;
-    border: 2px solid #F80032;
-    color: #E00C38;
-    font-weight: bolder;
-  }
-
 /* Estilos para a seção de ícones */
 
 .secao-icones {

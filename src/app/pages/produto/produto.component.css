@@ -71,10 +71,9 @@
   .add-to-cart-button:hover {
     background-color: #bb203f;
   }
-  
-  /* Modal */
 
-  /* Estilo para o modal */
+/* Estilo para o modal */
+
 .modal {
   position: fixed;
   z-index: 1;

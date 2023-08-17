@@ -1,0 +1,20 @@
+<div *ngIf="produtos.length > 0" class="resultado-pesquisa">
+  <div class="produto" *ngFor="let produto of produtos">
+    <h3>{{ produto.nome }}</h3>
+    <p class="categoria">{{ produto.categoria }}</p>
+    <p>{{ produto.descricao }}</p>
+    <p class="preco">R$ {{ produto.preco.toFixed(2) }}</p>
+    <button (click)="adicionarAoCarrinho(produto)" class="botao-adicionar">Adicionar ao Carrinho</button>
+  </div>
+</div>
+<ng-template #noResults>
+  <p class="no-results">Nenhum resultado encontrado.</p>
+</ng-template>
+
+<div *ngIf="produtoAdicionado" class="modal">
+  <div class="modal-content">
+      <span class="close" (click)="fecharModal()">&times;</span>
+      <h2>Produto Adicionado ao Carrinho</h2>
+      <p>O produto {{ produtoAdicionado.nome }} foi adicionado ao seu carrinho.</p>
+  </div>
+</div>

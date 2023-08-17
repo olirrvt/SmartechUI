@@ -37,6 +37,7 @@ export class ProdutoComponent {
     };
     
     this.produtoAdicionado = produto;
+    
     this.carrinhoService.adicionarItem(this.carrinhoId, itemCarrinho).subscribe(res => {
       console.log(res);
     });

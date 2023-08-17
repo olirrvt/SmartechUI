@@ -1,0 +1,98 @@
+/* Estilo para a lista de produtos */
+
+.resultado-pesquisa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+  
+  /* Estilo para o card de produto */
+
+  .produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    max-width: 400px;
+    margin: 15px auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .produto h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    text-align: center;
+  }
+  
+  .produto p {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    color: #777;
+  }
+  
+  .categoria {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #aaa;
+    text-transform: uppercase;
+  }
+
+  .botao-adicionar {
+    background-color: #c41010;
+    color: #ffffff;
+    border: none;
+    margin-top: 20px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 450ms ease-in-out;
+  }
+
+  .botao-adicionar:hover {
+    background-color: #b23d3d;
+    transition: all 450ms ease-in-out;
+  }
+
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

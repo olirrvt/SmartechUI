@@ -18,10 +18,11 @@
             </div>
     
             <div class="secao-pesquisar">
-                <input type="text" class="barra-pesquisar" placeholder="Busque aqui o seu produto">
-                <i class="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+                <input type="text" class="barra-pesquisar" placeholder="Busque aqui o seu produto" [(ngModel)]="pesquisa">
+                <a (click)="pesquisar()">
+                    <i class="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+                </a>
             </div>
-
     
             <div class="secao-icones">
                 <i class="fa-solid fa-shop fa-lg" style="color: #ffffff;"></i>
