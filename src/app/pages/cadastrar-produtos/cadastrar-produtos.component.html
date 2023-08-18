@@ -1,30 +1,35 @@
-<section class="cadastrar-produtos">
-    <div class="form-container">
-        <h2>Cadastrar Novo Produto</h2>
-        <form [formGroup]="formCadastrar" (ngSubmit)="cadastrarProduto()">
-          <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" formControlName="nome" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="preco">Preço:</label>
-            <input type="number" id="preco" formControlName="preco" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="categoria">Categoria:</label>
-            <input type="text" id="categoria" formControlName="categoria" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="descricao">Descrição:</label>
-            <textarea id="descricao" formControlName="descricao" class="form-control"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="idDaPromocao">ID da Promoção:</label>
-            <input type="number" id="idDaPromocao" formControlName="idDaPromocao" class="form-control">
-          </div>
-          <button type="submit" [disabled]="!formCadastrar.valid" class="btn btn-primary">Cadastrar</button>
-        </form>
+<div class="cadastrar-produtos">
+  <div class="form-container">
+    <h2>Cadastrar Produtos</h2>
+    <form>
+      <div class="form-group">
+        <label for="productName">Nome do Produto</label>
+        <input type="text" id="productName" class="form-control" name="productName">
       </div>
-</section>
+      <div class="form-group">
+        <label for="productDescription">Descrição do Produto</label>
+        <textarea id="productDescription" class="form-control" name="productDescription"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="idDaPromocao">ID da Promoção:</label>
+        <input type="number" id="idDaPromocao" formControlName="idDaPromocao" value="1" class="form-control">
+      </div>
+      <button type="submit" class="btn-primary cadastrar">Cadastrar</button>
+      <button type="button" class="btn-primary visualizar" (click)="mostrarPromocoes()">Mostrar Promoções</button>
+    </form>
+  </div>
 
-  
+  <div class="promocoes-container" *ngIf="mostrarPromocoesBox">
+    <div class="list-header">
+      <h3>Promoções Disponíveis</h3>
+      <i class="fa-solid fa-x btn-close" style="color: #000000;" (click)="fecharPromocoes()"></i>
+    </div>
+    <ul>
+      <li *ngFor="let promocao of promocoes"> 
+        ID da promoção: {{promocao.idDaPromocao}} | Nome: {{promocao.nomeDaPromocao}} <br>
+        Descrição: {{promocao.descricao}}
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -1,16 +1,31 @@
 <section class="section-promocao">
-    <div class="form-container">
-        <h2>Cadastrar Nova Promoção</h2>
-        <form [formGroup]="formCadastrar" (ngSubmit)="cadastrarPromocao()">
-          <div class="form-group">
-            <label for="nomeDaPromocao">Nome da Promoção:</label>
-            <input type="text" id="nomeDaPromocao" formControlName="nomeDaPromocao" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="descricao">Descrição:</label>
-            <textarea id="descricao" formControlName="descricao" class="form-control"></textarea>
-          </div>
-          <button type="submit" [disabled]="!formCadastrar.valid" class="btn btn-primary">Cadastrar Promoção</button>
-        </form>
-    </div>  
+  <div class="form-container">
+    <h2>Cadastrar Nova Promoção</h2>
+    <form [formGroup]="formCadastrar" (ngSubmit)="cadastrarPromocao()">
+      <div class="form-group">
+        <label for="nomeDaPromocao">Nome da Promoção:</label>
+        <input
+          type="text"
+          id="nomeDaPromocao"
+          formControlName="nomeDaPromocao"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="descricao">Descrição:</label>
+        <textarea
+          id="descricao"
+          formControlName="descricao"
+          class="form-control"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        [disabled]="!formCadastrar.valid"
+        class="btn btn-primary"
+      >
+        Cadastrar Promoção
+      </button>
+    </form>
+  </div>
 </section>

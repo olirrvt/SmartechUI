@@ -1,3 +1,5 @@
+/* Estilos para o form de produtos */
+
 .cadastrar-produtos {
     width: 100%;
     margin: 90px auto;
@@ -31,11 +33,68 @@
   }
   
   .btn-primary {
-    background-color: #007bff;
     color: #fff;
+    margin: 10px;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  .cadastrar {
+    background-color: #36e613;
+    transition: all 450ms ease-in-out;
+  }
+
+  .cadastrar:hover {
+    background-color: #379c22;
+    transition: all 450ms ease-in-out;
+  }
+  
+  .visualizar {
+    background-color: #e61313;
+    transition: all 450ms ease-in-out;
+  }
+
+  .visualizar:hover {
+    background-color: #9b1919;
+    transition: all 450ms ease-in-out;
+  }
+
+  /* Estilos do dropdown */
+
+  .promocoes-container {
+    margin-top: 20px;
+    padding: 20px;
+    width: 40%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .list-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  .btn-close {
+    cursor: pointer;
+  }
+
+  .promocoes-container h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .promocoes-container ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .promocoes-container li {
+    margin-bottom: 5px;
   }
   

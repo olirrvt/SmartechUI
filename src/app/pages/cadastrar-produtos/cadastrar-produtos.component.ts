@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Produto } from 'src/app/models/Produto';
+import { Promocao } from 'src/app/models/Promocao';
 import { ProdutoService } from 'src/app/services/Produto/produto.service';
+import { PromocaoService } from 'src/app/services/Promocao/promocao.service';
 
 @Component({
   selector: 'app-cadastrar-produtos',
@@ -10,10 +12,13 @@ import { ProdutoService } from 'src/app/services/Produto/produto.service';
 })
 export class CadastrarProdutosComponent {
   formCadastrar!: FormGroup;
+  promocoes: Promocao[] = [];
+  mostrarPromocoesBox: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private produtoService: ProdutoService) {}
+    private produtoService: ProdutoService,
+    private promocaoService: PromocaoService) {}
 
   ngOnInit(): void {
     this.inicializarFormulario();
@@ -41,6 +46,23 @@ export class CadastrarProdutosComponent {
       });
     }
 
+  }
+
+  mostrarPromocoes(): void {
+    this.promocaoService.getPromocoes().subscribe(
+      (promocoes: Promocao[]) => {
+        this.promocoes = promocoes;
+        this.mostrarPromocoesBox = true;
+      },
+      (error) => {
+        console.error('Erro ao obter promoções:', error);
+      }
+    );
+  }
+
+
+  fecharPromocoes(): void {
+    this.mostrarPromocoesBox = false;
   }
   
 }
