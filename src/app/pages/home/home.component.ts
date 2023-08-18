@@ -10,7 +10,7 @@ import { ProdutoService } from 'src/app/services/Produto/produto.service';
 export class HomeComponent {
 
   listaProdutos: Produto[] = [];
-  maxProductsToShow = 10;
+  maxProductsToShow = 8;
 
   constructor(
     private produtoServices: ProdutoService

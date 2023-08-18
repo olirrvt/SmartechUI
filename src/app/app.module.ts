@@ -17,6 +17,7 @@ import { CadastrarProdutosComponent } from './pages/cadastrar-produtos/cadastrar
 import { CadastrarPromocaoComponent } from './pages/cadastrar-promocao/cadastrar-promocao.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BuscarProdutosComponent } from './pages/buscar-produtos/buscar-produtos.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BuscarProdutosComponent } from './pages/buscar-produtos/buscar-produtos
     CadastrarProdutosComponent,
     CadastrarPromocaoComponent,
     HeaderComponent,
-    BuscarProdutosComponent
+    BuscarProdutosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
