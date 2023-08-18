@@ -15,16 +15,14 @@
       *ngFor="let item of itensCarrinho; let i = index"
     >
       <div class="conteudo-principal">
-        <span>{{ produtosNoCarrinho[i]?.nome | titlecase }}</span> <br />
+        <span>{{ produtosNoCarrinho[i].nome | titlecase }}</span> <br />
         <span
-          >Categoria: {{ produtosNoCarrinho[i]?.categoria | titlecase }}</span
+          >Categoria: {{ produtosNoCarrinho[i].categoria | titlecase }}</span
         >
       </div>
 
       <div class="container-preco">
-        <span
-          >Preço: R$ {{ produtosNoCarrinho[i]?.preco | number : "1.2-2" }}</span
-        >
+        <span>Preço: R$ {{ produtosNoCarrinho[i].preco | number : "1.2-2" }}</span>
       </div>
 
       <div class="container-quantidade">
@@ -71,7 +69,7 @@
       <div class="produtos-comprados">
         <h3>Produtos Comprados:</h3>
         <ul>
-          <li *ngFor="let produto of produtosComprados">{{ produto.nome }}</li>
+          <li *ngFor="let produto of produtosComprados">{{ produto?.nome }}</li>
         </ul>
       </div>
       <div class="total-compra">

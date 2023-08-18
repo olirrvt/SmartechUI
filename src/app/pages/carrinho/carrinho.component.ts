@@ -25,7 +25,7 @@ export class CarrinhoComponent {
   constructor(
     private carrinhoService: CarrinhoService,
     private produtoService: ProdutoService,
-    private promocaoService: PromocaoService
+    private promocaoService: PromocaoService,
   ) {}
 
   ngOnInit(): void {
@@ -69,7 +69,6 @@ export class CarrinhoComponent {
 
   atualizarQuantidade(itemId: number, novaQuantidade: number, index: number): void {
     this.carrinhoService.atualizarQuantidadeItem(this.carrinhoId, itemId, novaQuantidade).subscribe(response => {
-      console.log(response);
       this.itensCarrinho[index].quantidade = novaQuantidade;
       this.atualizarPrecosDosProdutos();
     });
@@ -84,7 +83,6 @@ export class CarrinhoComponent {
   
     if (tipoDePromocao === 2 && quantidade === 2) { // Leve 2 e pague por 1
       if (precoPorItem !== undefined) {
-        console.log(precoPorItem);
         precoTotal = precoPorItem;
       } else {
         console.error("Preço por item não está definido.");
@@ -94,7 +92,6 @@ export class CarrinhoComponent {
     } else {
       if (precoPorItem !== undefined) {
         precoTotal = precoPorItem * quantidade;
-        console.log(precoTotal);
       } else {
         console.error("Preço por item não está definido.");
       }

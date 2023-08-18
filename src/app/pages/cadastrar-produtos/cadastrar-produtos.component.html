@@ -1,7 +1,7 @@
 <div class="cadastrar-produtos">
   <div class="form-container">
     <h2>Cadastrar Produtos</h2>
-    <form>
+    <form [formGroup]="formCadastrar" (ngSubmit)="cadastrarProduto()">
       <div class="form-group">
         <label for="productName">Nome do Produto</label>
         <input
@@ -9,7 +9,16 @@
           id="productName"
           class="form-control"
           name="productName"
+          formControlName="nome"
         />
+      </div>
+      <div class="form-group">
+        <label for="preco">Preço:</label>
+        <input 
+        type="number"
+        id="preco" 
+        formControlName="preco" 
+        class="form-control">
       </div>
       <div class="form-group">
         <label for="productDescription">Descrição do Produto</label>
@@ -17,7 +26,16 @@
           id="productDescription"
           class="form-control"
           name="productDescription"
+          formControlName="descricao"
         ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="categoria">Categoria:</label>
+        <input 
+        type="text"
+        id="categoria" 
+        formControlName="categoria"
+        class="form-control">
       </div>
       <div class="form-group">
         <label for="idDaPromocao">ID da Promoção:</label>
@@ -53,7 +71,7 @@
       <li *ngFor="let promocao of promocoes">
         ID da promoção: {{ promocao.idDaPromocao }} | Nome:
         {{ promocao.nomeDaPromocao }} <br />
-        Descrição: {{ promocao.descricao }}
+        Descrição: {{ promocao.descricao }} <br>
       </li>
     </ul>
   </div>

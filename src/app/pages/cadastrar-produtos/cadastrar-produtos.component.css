@@ -96,6 +96,8 @@
   
   .promocoes-container li {
     margin-bottom: 5px;
+    border-bottom: 2px solid #000;
+    padding: 20px;
   }
 
   /* Estilo do modal de sucesso */

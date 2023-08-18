@@ -41,6 +41,8 @@ export class CadastrarProdutosComponent {
 
       const novoProduto: Produto = this.formCadastrar.value;
 
+      console.log(novoProduto);
+
       this.produtoService.inserirProduto(novoProduto).subscribe((res: Produto) => {
         console.log('Produto cadastrado:', res);
         this.formCadastrar.reset(); // Limpa o formulário após o cadastro bem-sucedido
