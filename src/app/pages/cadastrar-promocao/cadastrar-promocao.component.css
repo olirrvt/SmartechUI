@@ -32,10 +32,16 @@
   }
   
   .btn-primary {
-    background-color: #007bff;
+    background-color: #61e20a;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    transition: all 450ms ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #5ab31f;
+    transition: all 450ms ease-in-out;
   }
