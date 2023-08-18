@@ -10,6 +10,7 @@ import { PromocaoService } from 'src/app/services/Promocao/promocao.service';
 })
 export class CadastrarPromocaoComponent {
   formCadastrar!: FormGroup;
+  showModal: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -32,7 +33,13 @@ export class CadastrarPromocaoComponent {
       this.promocaoService.cadastrarPromocao(novaPromocao).subscribe(res => {
         console.log('Promoção cadastrada:', res);
         this.formCadastrar.reset(); // Limpa o formulário após o cadastro bem-sucedido
+        this.showModal = true;
       });
     }
   }
+
+  closeModal(): void {
+    this.showModal = false;
+  }
+
 }

@@ -28,4 +28,13 @@
       </button>
     </form>
   </div>
+
+  <div class="modal" [ngClass]="{ 'show': showModal }">
+    <div class="modal-content">
+      <h3>Sucesso!</h3>
+      <p>Sua promoção foi enviada ao nosso sistema. Iremos implementá-la em nosso sistema caso ela seja aprovada.</p>
+      <button class="btn-modal" (click)="closeModal()">Fechar</button>
+    </div>
+  </div>
+
 </section>
