@@ -65,7 +65,7 @@ export class CarrinhoComponent {
         this.totalComDesconto += item.precoComPromocao;
       });
     }
-  }  
+  }
 
   atualizarQuantidade(itemId: number, novaQuantidade: number, index: number): void {
     this.carrinhoService.atualizarQuantidadeItem(this.carrinhoId, itemId, novaQuantidade).subscribe(response => {
