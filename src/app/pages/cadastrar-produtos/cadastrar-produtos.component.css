@@ -97,4 +97,48 @@
   .promocoes-container li {
     margin-bottom: 5px;
   }
+
+  /* Estilo do modal de sucesso */
+
+  .modal-success {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .show-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-modal {
+    background-color: #e2110a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+    margin-top: 10px;
+  }
+
+  .btn-modal:hover {
+    background-color: #aa1616;
+    transition: all 450ms ease-in-out;
+  }
   

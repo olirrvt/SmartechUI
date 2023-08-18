@@ -58,3 +58,11 @@
     </ul>
   </div>
 </div>
+
+<div class="modal-success" [ngClass]="{ 'show-modal': showSuccessModal }">
+  <div class="modal-content">
+    <h3>Produto Cadastrado com Sucesso!</h3>
+    <p>O produto foi cadastrado e inserido com sucesso.</p>
+    <button class="btn-modal" (click)="closeSuccessModal()">Fechar</button>
+  </div>
+</div>

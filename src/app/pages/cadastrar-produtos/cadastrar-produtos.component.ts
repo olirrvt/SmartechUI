@@ -14,6 +14,7 @@ export class CadastrarProdutosComponent {
   formCadastrar!: FormGroup;
   promocoes: Promocao[] = [];
   mostrarPromocoesBox: boolean = false;
+  showSuccessModal: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -43,9 +44,14 @@ export class CadastrarProdutosComponent {
       this.produtoService.inserirProduto(novoProduto).subscribe((res: Produto) => {
         console.log('Produto cadastrado:', res);
         this.formCadastrar.reset(); // Limpa o formulário após o cadastro bem-sucedido
+        this.showSuccessModal = true;
       });
     }
 
+  }
+
+  closeSuccessModal(): void {
+    this.showSuccessModal = false;
   }
 
   mostrarPromocoes(): void {
@@ -59,7 +65,6 @@ export class CadastrarProdutosComponent {
       }
     );
   }
-
 
   fecharPromocoes(): void {
     this.mostrarPromocoesBox = false;
