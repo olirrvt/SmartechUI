@@ -1,72 +1,84 @@
 <section class="section-carrinho">
-
-    <div class="container-itens">
-      <div class="info-produtos">
-        <div>
-          <span>Produto</span>
-        </div>
-        <div class="container-especificacao">
-          <span>Qtd.</span>
-          <span>Preço</span>
-        </div>
+  <div class="container-itens">
+    <div class="info-produtos">
+      <div>
+        <span>Produto</span>
       </div>
-  
-      <div class="container-card-produto" *ngFor="let item of itensCarrinho; let i = index">
-        <div class="conteudo-principal">
-          <span>{{ produtosNoCarrinho[i]?.nome | titlecase }}</span> <br>
-          <span>Categoria: {{ produtosNoCarrinho[i]?.categoria | titlecase }}</span>
-        </div>
-        
-        <div class="container-preco">
-          <span>Preço: R$ {{ produtosNoCarrinho[i]?.preco | number:'1.2-2' }}</span>
-        </div>
-        
-        <div class="container-quantidade">
-            <span>Quantidade</span>
-            <input type="number" [(ngModel)]="item.quantidade" (change)="atualizarQuantidade(item.id, item.quantidade, i)" class="quantidade-input" min="1" />
-        </div>
-        
-        <div class="container-interacao">
-          <button class="btn-remover" (click)="removerItem(item.id)">Remover</button>
-        </div>
+      <div class="container-especificacao">
+        <span>Qtd.</span>
+        <span>Preço</span>
       </div>
     </div>
-  
-    <div class="container-resumo-pedido">
-      <h1>Resumo pedido</h1>
-  
-      <div class="especificacao-resumo">
-        <div>
-          <span>{{ itensCarrinho.length }} produto(s)</span>
-        </div>
+
+    <div
+      class="container-card-produto"
+      *ngFor="let item of itensCarrinho; let i = index"
+    >
+      <div class="conteudo-principal">
+        <span>{{ produtosNoCarrinho[i]?.nome | titlecase }}</span> <br />
+        <span
+          >Categoria: {{ produtosNoCarrinho[i]?.categoria | titlecase }}</span
+        >
       </div>
-  
-      <div class="container-total">
-        <span>Total</span>
-        <span>R$ {{ totalComDesconto | number:'1.2-2' }}</span>
+
+      <div class="container-preco">
+        <span
+          >Preço: R$ {{ produtosNoCarrinho[i]?.preco | number : "1.2-2" }}</span
+        >
       </div>
-  
-      <div class="container-comprar">
-        <button class="btn-comprar" (click)="comprar()">Comprar</button>
+
+      <div class="container-quantidade">
+        <span>Quantidade</span>
+        <input
+          type="number"
+          [(ngModel)]="item.quantidade"
+          (change)="atualizarQuantidade(item.id, item.quantidade, i)"
+          class="quantidade-input"
+          min="1"
+        />
       </div>
-      
+
+      <div class="container-interacao">
+        <button class="btn-remover" (click)="removerItem(item.id)">
+          Remover
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-resumo-pedido">
+    <h1>Resumo pedido</h1>
+
+    <div class="especificacao-resumo">
+      <div>
+        <span>{{ itensCarrinho.length }} produto(s)</span>
+      </div>
     </div>
 
-    <div class="modal" [ngClass]="{'show-modal': showModal}">
-      <div class="modal-content">
-        <h2>Compra Concluída</h2>
-        <div class="produtos-comprados">
-          <h3>Produtos Comprados:</h3>
-          <ul>
-            <li *ngFor="let produto of produtosComprados">{{ produto.nome }}</li>
-          </ul>
-        </div>
-        <div class="total-compra">
-          <h3>Total da Compra:</h3>
-          <p>R$ {{ totalComDesconto | number:'1.2-2' }}</p>
-        </div>
-        <button class="btn-fechar" (click)="fecharModal()">Fechar</button>
+    <div class="container-total">
+      <span>Total</span>
+      <span>R$ {{ totalComDesconto | number : "1.2-2" }}</span>
+    </div>
+
+    <div class="container-comprar">
+      <button class="btn-comprar" (click)="comprar()">Comprar</button>
+    </div>
+  </div>
+
+  <div class="modal" [ngClass]="{ 'show-modal': showModal }">
+    <div class="modal-content">
+      <h2>Compra Concluída</h2>
+      <div class="produtos-comprados">
+        <h3>Produtos Comprados:</h3>
+        <ul>
+          <li *ngFor="let produto of produtosComprados">{{ produto.nome }}</li>
+        </ul>
       </div>
-    </div>    
-  
-  </section> 
+      <div class="total-compra">
+        <h3>Total da Compra:</h3>
+        <p>R$ {{ totalComDesconto | number : "1.2-2" }}</p>
+      </div>
+      <button class="btn-fechar" (click)="fecharModal()">Fechar</button>
+    </div>
+  </div>
+</section>
